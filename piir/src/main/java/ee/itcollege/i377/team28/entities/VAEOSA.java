@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -31,16 +33,30 @@ public class VAEOSA implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long vaeosa_ID_id;
+	@NotNull
+	@Size(min=1, max=20)
 	private String kood;
+	@NotNull
+	@Size(min=1, max=100)
 	private String nimetus;
+	@NotNull
 	private Date alates;
+	@NotNull
 	private Date kuni;
 	private String kommentaar;
+	@NotNull
+	@Size(min=1, max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1, max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1, max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne
@@ -48,7 +64,7 @@ public class VAEOSA implements Serializable {
 	@OneToMany(mappedBy = "vAEOSA")
 	private Collection<VAEOSA_ALLUVUS> vAEOSA_ALLUVUS;
 	@OneToMany(mappedBy = "vAEOSA")
-	private Collection<PIIRIPUNKT_ALLUVUS> pIIRIPUNKT_ALLUVUS;
+	private Collection<PIIRIPUNKTI_ALLUVUS> pIIRIPUNKT_ALLUVUS;
 	@OneToMany(mappedBy = "vAEOSA")
 	private Collection<ORG_YKSUS> oRG_YKSUS;
 	@OneToMany(mappedBy = "vAEOSA")
@@ -159,10 +175,10 @@ public class VAEOSA implements Serializable {
 	public void setVAEOSA_ALLUVUS(Collection<VAEOSA_ALLUVUS> param) {
 	    this.vAEOSA_ALLUVUS = param;
 	}
-	public Collection<PIIRIPUNKT_ALLUVUS> getPIIRIPUNKT_ALLUVUS() {
+	public Collection<PIIRIPUNKTI_ALLUVUS> getPIIRIPUNKT_ALLUVUS() {
 	    return pIIRIPUNKT_ALLUVUS;
 	}
-	public void setPIIRIPUNKT_ALLUVUS(Collection<PIIRIPUNKT_ALLUVUS> param) {
+	public void setPIIRIPUNKT_ALLUVUS(Collection<PIIRIPUNKTI_ALLUVUS> param) {
 	    this.pIIRIPUNKT_ALLUVUS = param;
 	}
 	public Collection<ORG_YKSUS> getORG_YKSUS() {

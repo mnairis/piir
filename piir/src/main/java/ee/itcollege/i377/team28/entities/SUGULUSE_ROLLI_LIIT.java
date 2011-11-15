@@ -13,6 +13,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.SEOTUD_KONTAKTISIK;
 import java.util.Collection;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: SUGULUSE_ROLLI_LIIT
@@ -27,14 +29,25 @@ public class SUGULUSE_ROLLI_LIIT implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long suguluse_rolli_liit_id;
+	@NotNull
+	@Size(min=1,max=60)
 	private String nimetus;
 	private String kommentaar;
+	@Size(min=1,max=1)
 	private char sugulane_voi_mitte;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1,max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "sUGULUSE_ROLLI_LIIT")

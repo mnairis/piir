@@ -15,6 +15,8 @@ import java.util.Collection;
 import ee.itcollege.i377.team28.entities.AMET_PIIRIPUNKTIS;
 import javax.persistence.OneToMany;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: AMET
@@ -30,14 +32,24 @@ public class AMET implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long amet_id;
+	@Size(min=1,max=10)
 	private String ISCO_kood;
+	@Size(min=1,max=60)
 	private String nimetus;
 	private String kommentaar;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1,max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "aMET")

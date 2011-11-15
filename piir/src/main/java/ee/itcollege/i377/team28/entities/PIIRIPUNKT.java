@@ -1,6 +1,7 @@
 package ee.itcollege.i377.team28.entities;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -10,7 +11,7 @@ import javax.persistence.Id;
 
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
-import ee.itcollege.i377.team28.entities.PIIRIPUNKT_ALLUVUS;
+import ee.itcollege.i377.team28.entities.PIIRIPUNKTI_ALLUVUS;
 import java.util.Collection;
 import javax.persistence.OneToMany;
 import ee.itcollege.i377.team28.entities.PIIRILOIGU_HALDAJA;
@@ -18,7 +19,9 @@ import ee.itcollege.i377.team28.entities.PIIRIPUNKT_ORG_YKSUS;
 import ee.itcollege.i377.team28.entities.VAHTKOND;
 import ee.itcollege.i377.team28.entities.AMET_PIIRIPUNKTIS;
 import javax.persistence.ManyToMany;
-import ee.itcollege.i377.team28.entities.PIIRIPUNKTI_ALLUVUS;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: PIIRIPUNKT
@@ -33,23 +36,43 @@ public class PIIRIPUNKT implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long piiripunkt_id;
+	@NotNull
+	@Size(min=1, max=20)
 	private String kood;
+	@NotNull
+	@Size(min=1, max=100)
 	private String nimetus;
-	private double GPS_longitude;
-	private double GPS_latitude;
-	private double korgus_merepinnast;
+	@NotNull
+	@Digits(integer=9, fraction=0)
+	private BigDecimal GPS_longitude;
+	@NotNull
+	@Digits(integer=9, fraction=0)
+	private BigDecimal GPS_latitude;
+	@NotNull
+	@Digits(integer=6, fraction=0)
+	private BigDecimal korgus_merepinnast;
 	private String kommentaar;
+	@NotNull
 	private Date alates;
+	@NotNull
 	private Date kuni;
+	@NotNull
+	@Size(min=1, max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1, max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1, max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "pIIRIPUNKT")
-	private Collection<PIIRIPUNKT_ALLUVUS> pIIRIPUNKT_ALLUVUS;
+	private Collection<PIIRIPUNKTI_ALLUVUS> pIIRIPUNKT_ALLUVUS;
 	@OneToMany(mappedBy = "pIIRIPUNKT")
 	private Collection<PIIRILOIGU_HALDAJA> pIIRILOIGU_HALDAJA;
 	@OneToMany(mappedBy = "pIIRIPUNKT")
@@ -85,25 +108,25 @@ public class PIIRIPUNKT implements Serializable {
 	public void setNimetus(String nimetus) {
 		this.nimetus = nimetus;
 	}   
-	public double getGPS_longitude() {
+	public BigDecimal getGPS_longitude() {
 		return this.GPS_longitude;
 	}
 
-	public void setGPS_longitude(double GPS_longitude) {
+	public void setGPS_longitude(BigDecimal GPS_longitude) {
 		this.GPS_longitude = GPS_longitude;
 	}   
-	public double getGPS_latitude() {
+	public BigDecimal getGPS_latitude() {
 		return this.GPS_latitude;
 	}
 
-	public void setGPS_latitude(double GPS_latitude) {
+	public void setGPS_latitude(BigDecimal GPS_latitude) {
 		this.GPS_latitude = GPS_latitude;
 	}   
-	public double getKorgus_merepinnast() {
+	public BigDecimal getKorgus_merepinnast() {
 		return this.korgus_merepinnast;
 	}
 
-	public void setKorgus_merepinnast(double korgus_merepinnast) {
+	public void setKorgus_merepinnast(BigDecimal korgus_merepinnast) {
 		this.korgus_merepinnast = korgus_merepinnast;
 	}   
 	public String getKommentaar() {
@@ -169,10 +192,10 @@ public class PIIRIPUNKT implements Serializable {
 	public void setSuletud(Date suletud) {
 		this.suletud = suletud;
 	}
-	public Collection<PIIRIPUNKT_ALLUVUS> getPIIRIPUNKT_ALLUVUS() {
+	public Collection<PIIRIPUNKTI_ALLUVUS> getPIIRIPUNKT_ALLUVUS() {
 	    return pIIRIPUNKT_ALLUVUS;
 	}
-	public void setPIIRIPUNKT_ALLUVUS(Collection<PIIRIPUNKT_ALLUVUS> param) {
+	public void setPIIRIPUNKT_ALLUVUS(Collection<PIIRIPUNKTI_ALLUVUS> param) {
 	    this.pIIRIPUNKT_ALLUVUS = param;
 	}
 	public Collection<PIIRILOIGU_HALDAJA> getPIIRILOIGU_HALDAJA() {

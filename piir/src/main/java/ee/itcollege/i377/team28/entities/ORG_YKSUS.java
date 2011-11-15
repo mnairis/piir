@@ -14,6 +14,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.ORG_YKSUS;
 import java.util.Collection;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: ORG_YKSUS
@@ -26,16 +28,30 @@ public class ORG_YKSUS implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long org_yksus_ID;
+	@NotNull
+	@Size(min=1,max=20)
 	private String kood;
+	@NotNull
+	@Size(min=1,max=100)
 	private String nimetus;
 	private String kommentaar;
+	@NotNull
 	private Date alates;
+	@NotNull
 	private Date kuni;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1,max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne

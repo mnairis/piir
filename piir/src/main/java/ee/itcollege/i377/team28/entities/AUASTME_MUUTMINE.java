@@ -12,6 +12,9 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.AUASTE;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import ee.itcollege.i377.team28.entities.PIIRIVALVUR;
 
 /**
@@ -30,11 +33,19 @@ public class AUASTME_MUUTMINE implements Serializable {
 	private Date alates;
 	private Date kuni;
 	private String kommentaar;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1,max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne

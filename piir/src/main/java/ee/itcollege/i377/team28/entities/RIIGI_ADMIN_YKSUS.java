@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -28,15 +30,26 @@ public class RIIGI_ADMIN_YKSUS implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long riigi_admin_yksus_id;
+	@Size (min=1, max=100)
 	private String nimetus;
 	private String kommentaar;
+	@NotNull
 	private Date alates;
+	@NotNull
 	private Date kuni;
+	@NotNull
+	@Size (min=1, max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size (min=1, max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size (min=1, max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne

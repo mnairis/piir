@@ -16,6 +16,9 @@ import ee.itcollege.i377.team28.entities.SEADUS;
 import javax.persistence.OneToMany;
 import ee.itcollege.i377.team28.entities.SEADUSE_PUNKT;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import ee.itcollege.i377.team28.entities.OBJEKTI_SEADUS_INTSIDENDIS;
 import ee.itcollege.i377.team28.entities.ISIKU_SEADUS_INTSIDENDID;
 
@@ -32,17 +35,31 @@ public class SEADUSE_PUNKT implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long seaduse_punkt_id;
+	@Size(min=1,max=18)
 	private String paragrahv;
+	@Size(min=1,max=18)
 	private String pais;
+	@Size(min=1,max=18)
 	private String tekst;
+	@Size(min=1,max=18)
 	private String kehtiv_alates;
+	@Size(min=1,max=18)
 	private String kehtiv_kuni;
+	@Size(min=1,max=18)
 	private String kommentaar;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1,max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "sEADUSE_PUNKT")

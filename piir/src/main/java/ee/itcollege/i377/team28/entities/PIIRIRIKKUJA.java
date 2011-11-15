@@ -14,6 +14,8 @@ import ee.itcollege.i377.team28.entities.KODAKONDSUS;
 import java.util.Collection;
 import ee.itcollege.i377.team28.entities.ISIK_INTSIDENDIS;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: PIIRIRIKKUJA
@@ -28,17 +30,29 @@ public class PIIRIRIKKUJA implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long piiririkkuja_id;
+	@Size(min=1,max=32)
 	private String isikukood;
+	@Size(min=1,max=25)
 	private String eesnimi;
+	@Size(min=1,max=35)
 	private String perek_nimi;
+	@Size(min=1,max=1)
 	private char sugu;
 	private Date synniaeg;
 	private String kommentaar;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1,max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "pIIRIRIKKUJA")

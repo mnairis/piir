@@ -13,6 +13,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.PIIRIVALVUR;
 import ee.itcollege.i377.team28.entities.KONTAKTI_LIIK;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: PIIRIVALVURI_KONTAKT
@@ -28,16 +30,28 @@ public class PIIRIVALVURI_KONTAKT implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long piirivalvuri_kontakt_id;
+	@NotNull
+	@Size(min=1, max=120)
 	private String kontakt;
+	@Size(min=1, max=1)
 	private String peamine_kontakt;
 	private Date alates;
 	private Date kuni;
+	@NotNull
 	private String kommentaar;
+	@NotNull
+	@Size(min=1, max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1, max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1, max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne

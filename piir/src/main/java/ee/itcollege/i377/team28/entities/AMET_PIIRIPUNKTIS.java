@@ -16,6 +16,8 @@ import ee.itcollege.i377.team28.entities.AMET;
 import javax.persistence.OneToMany;
 import ee.itcollege.i377.team28.entities.PIIRIPUNKT;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: AMET_PIIRIPUNKTIS
@@ -30,14 +32,23 @@ public class AMET_PIIRIPUNKTIS implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long amet_piiripunktis_id;
+	@NotNull
 	private Date alates;
+	@NotNull
 	private Date kuni;
 	private String kommentaar;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1,max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "aMET_PIIRIPUNKTIS")

@@ -13,6 +13,9 @@ import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.PIIRIPUNKT;
 import ee.itcollege.i377.team28.entities.PIIRILOIK;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import ee.itcollege.i377.team28.entities.VAEOSA;
 
 /**
@@ -39,6 +42,8 @@ public class PIIRILOIGU_HALDAJA implements Serializable {
 	private Date kuni;
 	private String avaja;
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
 	private Date muudetud;
 	private String sulgeja;

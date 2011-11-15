@@ -1,6 +1,7 @@
 package ee.itcollege.i377.team28.entities;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -13,6 +14,9 @@ import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.AMET_PIIRIPUNKTIS;
 import ee.itcollege.i377.team28.entities.PIIRIVALVUR;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: PIIRIVALVUR_PIIRIPUNKTIS
@@ -28,15 +32,27 @@ public class PIIRIVALVUR_PIIRIPUNKTIS implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long piirivalvur_piiripunktis_id;
+	@NotNull
 	private Date alates;
+	@NotNull
 	private Date kuni;
-	private double koormus;
+	@NotNull
+	@Digits(integer=5,fraction=0)
+	private BigDecimal koormus;
 	private String kommentaar;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@NotNull
 	private Date suletud;
+	@Size(min=1,max=32)
 	private String sulgeja;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne
@@ -68,11 +84,11 @@ public class PIIRIVALVUR_PIIRIPUNKTIS implements Serializable {
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
 	}   
-	public double getKoormus() {
+	public BigDecimal getKoormus() {
 		return this.koormus;
 	}
 
-	public void setKoormus(double koormus) {
+	public void setKoormus(BigDecimal koormus) {
 		this.koormus = koormus;
 	}   
 	public String getKommentaar() {

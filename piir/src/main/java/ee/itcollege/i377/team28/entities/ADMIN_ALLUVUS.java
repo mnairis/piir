@@ -23,6 +23,7 @@ public class ADMIN_ALLUVUS implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long admin_alluvus_id;
+	
 	private String alates;
 	private String kuni;
 	private String kommentaar;

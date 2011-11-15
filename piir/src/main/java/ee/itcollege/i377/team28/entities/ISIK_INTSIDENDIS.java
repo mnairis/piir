@@ -16,6 +16,8 @@ import javax.persistence.ManyToOne;
 import ee.itcollege.i377.team28.entities.ISIKU_SEADUS_INTSIDENDID;
 import java.util.Collection;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: ISIK_INTSIDENDIS
@@ -30,15 +32,26 @@ public class ISIK_INTSIDENDIS implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long isik_intsidendis_id;
+	@NotNull
 	private Date alates;
+	@NotNull
 	private Date kuni;
+	@NotNull
 	private String kirjeldus;
 	private String kommentaar;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1,max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne

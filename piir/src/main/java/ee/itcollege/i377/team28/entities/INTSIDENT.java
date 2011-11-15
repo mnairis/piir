@@ -1,6 +1,7 @@
 package ee.itcollege.i377.team28.entities;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -17,6 +18,10 @@ import ee.itcollege.i377.team28.entities.VAHTKOND_INTSIDENDIS;
 import java.util.Collection;
 import ee.itcollege.i377.team28.entities.PIIRIVALVUR_INTSIDENDIS;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import ee.itcollege.i377.team28.entities.ISIK_INTSIDENDIS;
 import ee.itcollege.i377.team28.entities.OBJEKT_INTSIDENDIS;
 
@@ -33,19 +38,31 @@ public class INTSIDENT implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long intsident_id;
+	@Size(min=1,max=20)
 	private String kood;
+	@Size(min=1,max=100)
 	private String nimetus;
 	private Date toimumise_algus;
 	private Date toimumise_lopp;
-	private double GPS_longituud;
-	private double GPS_latituud;
+	@Digits(integer=9,fraction=0)
+	private BigDecimal GPS_longituud;
+	@Digits(integer=9,fraction=0)
+	private BigDecimal GPS_latituud;
 	private String kirjeldus;
 	private String kommentaar;
+	@NotNull
+	@Size(min=1,max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size(min=1,max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size(min=1,max=32)
 	private Date sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne
@@ -99,18 +116,18 @@ public class INTSIDENT implements Serializable {
 	public void setToimumise_lopp(Date toimumise_lopp) {
 		this.toimumise_lopp = toimumise_lopp;
 	}   
-	public double getGPS_longituud() {
+	public BigDecimal getGPS_longituud() {
 		return this.GPS_longituud;
 	}
 
-	public void setGPS_longituud(double GPS_longituud) {
+	public void setGPS_longituud(BigDecimal GPS_longituud) {
 		this.GPS_longituud = GPS_longituud;
 	}   
-	public double getGPS_latituud() {
+	public BigDecimal getGPS_latituud() {
 		return this.GPS_latituud;
 	}
 
-	public void setGPS_latituud(double GPS_latituud) {
+	public void setGPS_latituud(BigDecimal GPS_latituud) {
 		this.GPS_latituud = GPS_latituud;
 	}   
 	public String getKirjeldus() {

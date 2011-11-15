@@ -9,7 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.RIIGI_ADMIN_YKSUS;
@@ -27,16 +28,28 @@ public class RIIGI_ADMIN_YKSUSE_LIIK implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long riigi_admin_yksuse_liik_id;
-	private String kood;
+	@NotNull
+	@Size (min=1, max=100)
 	private String nimetus;
+	
 	private String kommentaar;
+	@NotNull
 	private Date alates;
+	@NotNull
 	private Date kuni;
+	@NotNull
+	@Size (min=1, max=32)
 	private String avaja;
+	@NotNull
 	private Date avatud;
+	@NotNull
+	@Size (min=1, max=32)
 	private String muutja;
+	@NotNull
 	private Date muudetud;
+	@Size (min=1, max=32)
 	private String sulgeja;
+	@NotNull
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "rIIGI_ADMIN_YKSUSE_LIIK_1")
@@ -52,13 +65,6 @@ public class RIIGI_ADMIN_YKSUSE_LIIK implements Serializable {
 
 	public void setRiigi_admin_yksuse_liik_id(Long riigi_admin_yksuse_liik_id) {
 		this.riigi_admin_yksuse_liik_id = riigi_admin_yksuse_liik_id;
-	}   
-	public String getKood() {
-		return this.kood;
-	}
-
-	public void setKood(String kood) {
-		this.kood = kood;
 	}   
 	public String getNimetus() {
 		return this.nimetus;
