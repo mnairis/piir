@@ -13,6 +13,7 @@
         <field:datetime dateTimePattern="${OBJEKT_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team28_entities_OBJEKT_suletud" required="true" z="ensdRp38QoHBYafg1P+p/GmVvNU="/>
         <field:simple field="oBJEKT_INTSIDENDIS" id="c_ee_itcollege_i377_team28_entities_OBJEKT_oBJEKT_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="O B J E K T_ I N T S I D E N D I S" z="9oS37rxfR+j3FqmRAr8sfQrrYJ4="/>
         <field:select field="oBJEKTI_LIIK" id="c_ee_itcollege_i377_team28_entities_OBJEKT_oBJEKTI_LIIK" itemValue="objekti_liik_id" items="${objekti_liiks}" path="/objekti_liiks" z="U4mC0U4oa0Q+6qDIXFgR7C2cDws="/>
+        <field:simple field="pIIRIRIKKUJA" id="c_ee_itcollege_i377_team28_entities_OBJEKT_pIIRIRIKKUJA" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I R I K K U J A" z="PqE7khLkaJJuFOb8w1vCxdxThTE="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_i377_team28_entities_OBJEKT" render="${not empty dependencies}" z="LM0LTc01U5pthvHaudHsfbWg6jM="/>
 </div>

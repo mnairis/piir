@@ -14,6 +14,7 @@ import ee.itcollege.i377.team28.entities.PIIRIVALVUR;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import ee.itcollege.i377.team28.entities.VOODIKOHT;
 
 /**
  * Entity implementation class for Entity: PIIRIVALVUR_VOODIKOHAL
@@ -48,6 +49,8 @@ public class PIIRIVALVUR_VOODIKOHAL implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@ManyToOne
 	private PIIRIVALVUR pIIRIVALVUR;
+	@ManyToOne
+	private VOODIKOHT vOODIKOHT;
 
 	public PIIRIVALVUR_VOODIKOHAL() {
 		super();
@@ -127,6 +130,12 @@ public class PIIRIVALVUR_VOODIKOHAL implements Serializable {
 	}
 	public void setPIIRIVALVUR(PIIRIVALVUR param) {
 	    this.pIIRIVALVUR = param;
+	}
+	public VOODIKOHT getVOODIKOHT() {
+	    return vOODIKOHT;
+	}
+	public void setVOODIKOHT(VOODIKOHT param) {
+	    this.vOODIKOHT = param;
 	}
    
 }

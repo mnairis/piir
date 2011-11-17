@@ -13,7 +13,7 @@
         <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team28_entities_AMET_PIIRIPUNKTIS_sulgeja" z="VgtGTggBtnRO8lR1niPkL6snp0o="/>
         <field:datetime dateTimePattern="${AMET_PIIRIPUNKTIS_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team28_entities_AMET_PIIRIPUNKTIS_suletud" required="true" z="zbxKjcwOH0+J5b+f2TI9fSog+no="/>
         <field:simple field="pIIRIVALVUR_PIIRIPUNKTIS" id="c_ee_itcollege_i377_team28_entities_AMET_PIIRIPUNKTIS_pIIRIVALVUR_PIIRIPUNKTIS" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ P I I R I P U N K T I S" z="vnl5m9J9+6uZ4FgT31WjNzWRqiw="/>
-        <field:select field="aMET" id="c_ee_itcollege_i377_team28_entities_AMET_PIIRIPUNKTIS_aMET" itemValue="amet_id" items="${amets}" multiple="true" path="/amets" z="2s2T0XaBwEX6dTzSISYyMqQamUA="/>
+        <field:select field="aMET" id="c_ee_itcollege_i377_team28_entities_AMET_PIIRIPUNKTIS_aMET" itemValue="amet_id" items="${amets}" path="/amets" z="MkeXLpfP9/2SorKaTx90rSp9Z+0="/>
         <field:select field="pIIRIPUNKT" id="c_ee_itcollege_i377_team28_entities_AMET_PIIRIPUNKTIS_pIIRIPUNKT" itemValue="piiripunkt_id" items="${piiripunkts}" multiple="true" path="/piiripunkts" z="/C+H3EOEgNoFEHnLVQfU68CeYFQ="/>
         <field:simple field="pIIRIVALVUR_PIIRIPUNKTIS_1" id="c_ee_itcollege_i377_team28_entities_AMET_PIIRIPUNKTIS_pIIRIVALVUR_PIIRIPUNKTIS_1" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ P I I R I P U N K T I S" z="9PsV0A4IuAWDSSgppXNY3f26VTg="/>
     </form:update>

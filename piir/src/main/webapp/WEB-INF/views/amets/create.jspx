@@ -13,7 +13,7 @@
         <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team28_entities_AMET_sulgeja" z="cjULaDuCdgko4bqrF9hfcEEFrdQ="/>
         <field:datetime dateTimePattern="${AMET_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team28_entities_AMET_suletud" required="true" z="slSvszEkMt+yb7TikQZkz1wvkZY="/>
         <field:simple field="aMET_VAEOSAS" id="c_ee_itcollege_i377_team28_entities_AMET_aMET_VAEOSAS" messageCode="entity_reference_not_managed" messageCodeAttribute="A M E T_ V A E O S A S" z="j9yWOhKRcokTu1R1/Brua1QosFU="/>
-        <field:select field="aMET_PIIRIPUNKTIS" id="c_ee_itcollege_i377_team28_entities_AMET_aMET_PIIRIPUNKTIS" itemValue="amet_piiripunktis_id" items="${amet_piiripunktiss}" multiple="true" path="/amet_piiripunktiss" z="5gyrQAyVR4ppu/eEgWJbZtuo4NE="/>
+        <field:simple field="aMET_PIIRIPUNKTIS" id="c_ee_itcollege_i377_team28_entities_AMET_aMET_PIIRIPUNKTIS" messageCode="entity_reference_not_managed" messageCodeAttribute="A M E T_ P I I R I P U N K T I S" z="Z+Ly4GU+bbsRHIORWue0PsZSaC4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_i377_team28_entities_AMET" render="${not empty dependencies}" z="qql1wZkiinlGqUDVRtN1uYEsogU="/>
 </div>

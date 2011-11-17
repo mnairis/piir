@@ -13,5 +13,6 @@
         <field:display field="sulgeja" id="s_ee_itcollege_i377_team28_entities_PIIRIVALVUR_VOODIKOHAL_sulgeja" object="${piirivalvur_voodikohal}" z="SAlYopT6un7yv+hIQywxLYX3n18="/>
         <field:display date="true" dateTimePattern="${PIIRIVALVUR_VOODIKOHAL_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team28_entities_PIIRIVALVUR_VOODIKOHAL_suletud" object="${piirivalvur_voodikohal}" z="cM6lBkhxlVTZUvR79/JFYzmCTNI="/>
         <field:display field="PIIRIVALVUR" id="s_ee_itcollege_i377_team28_entities_PIIRIVALVUR_VOODIKOHAL_pIIRIVALVUR" object="${piirivalvur_voodikohal}" z="D3HaMtN9LzqlfBHluCy90qmsVeM="/>
+        <field:display field="VOODIKOHT" id="s_ee_itcollege_i377_team28_entities_PIIRIVALVUR_VOODIKOHAL_vOODIKOHT" object="${piirivalvur_voodikohal}" z="rOrq1EI7t3f034PZ6tq7sKQC5Bc="/>
     </page:show>
 </div>

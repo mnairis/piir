@@ -1,22 +1,20 @@
 package ee.itcollege.i377.team28.entities;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
-import ee.itcollege.i377.team28.entities.AMET_VAEOSAS;
-import java.util.Collection;
 import ee.itcollege.i377.team28.entities.AMET_PIIRIPUNKTIS;
-import javax.persistence.OneToMany;
-import javax.persistence.ManyToMany;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 /**
  * Entity implementation class for Entity: AMET
@@ -54,9 +52,8 @@ public class AMET implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "aMET")
 	private Collection<AMET_VAEOSAS> aMET_VAEOSAS;
-	@ManyToMany(mappedBy = "aMET")
+	@OneToMany(mappedBy = "aMET")
 	private Collection<AMET_PIIRIPUNKTIS> aMET_PIIRIPUNKTIS;
-
 	public AMET() {
 		super();
 	}   

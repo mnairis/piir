@@ -12,6 +12,5 @@
         <field:display date="true" dateTimePattern="${AMET_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team28_entities_AMET_muudetud" object="${amet}" z="OGlF/4j+omtXOdIlrYbL3kVfvIQ="/>
         <field:display field="sulgeja" id="s_ee_itcollege_i377_team28_entities_AMET_sulgeja" object="${amet}" z="G9O5SKG62NgHGP1ntjL4rOAcZtQ="/>
         <field:display date="true" dateTimePattern="${AMET_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team28_entities_AMET_suletud" object="${amet}" z="/I/q/SfcXEow25UNGn0IdkfxsqE="/>
-        <field:display field="AMET_PIIRIPUNKTIS" id="s_ee_itcollege_i377_team28_entities_AMET_aMET_PIIRIPUNKTIS" object="${amet}" z="3ET9LRPr5TNBYCaI6h5mPnh9ogk="/>
     </page:show>
 </div>

@@ -13,5 +13,6 @@
         <field:display date="true" dateTimePattern="${RIIGI_ADMIN_YKSUSE_LIIK_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team28_entities_RIIGI_ADMIN_YKSUSE_LIIK_muudetud" object="${riigi_admin_yksuse_liik}" z="U8Ob6XW4g9EKh62AsjVIEacD/Bc="/>
         <field:display field="sulgeja" id="s_ee_itcollege_i377_team28_entities_RIIGI_ADMIN_YKSUSE_LIIK_sulgeja" object="${riigi_admin_yksuse_liik}" z="LD+B/fGdpOq6/DQq880DGr9Ot88="/>
         <field:display date="true" dateTimePattern="${RIIGI_ADMIN_YKSUSE_LIIK_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team28_entities_RIIGI_ADMIN_YKSUSE_LIIK_suletud" object="${riigi_admin_yksuse_liik}" z="Fv4BaKiso08qrodsdiUiF98uzio="/>
+        <field:display field="kood" id="s_ee_itcollege_i377_team28_entities_RIIGI_ADMIN_YKSUSE_LIIK_kood" object="${riigi_admin_yksuse_liik}" z="aLIU/mHa6kMLvFcJ3M9HDMh9N9s="/>
     </page:show>
 </div>

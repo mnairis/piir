@@ -17,5 +17,6 @@
         <field:datetime dateTimePattern="${PIIRIRIKKUJA_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team28_entities_PIIRIRIKKUJA_suletud" required="true" z="A2W9dBJ2ox4GdqjnNUAy4QOVZ+8="/>
         <field:simple field="kODAKONDSUS" id="c_ee_itcollege_i377_team28_entities_PIIRIRIKKUJA_kODAKONDSUS" messageCode="entity_reference_not_managed" messageCodeAttribute="K O D A K O N D S U S" z="XIg23JbAfr6ZoCg8vAz5hFH09Tc="/>
         <field:simple field="iSIK_INTSIDENDIS" id="c_ee_itcollege_i377_team28_entities_PIIRIRIKKUJA_iSIK_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="I S I K_ I N T S I D E N D I S" z="dV4UIR1F0W3pJ2oOTaF2HS3UGyM="/>
+        <field:select field="oBJEKT" id="c_ee_itcollege_i377_team28_entities_PIIRIRIKKUJA_oBJEKT" itemValue="objekt_id" items="${objekts}" path="/objekts" z="4CsqiIgqUKO43hq1Az9GFoKFrpY="/>
     </form:update>
 </div>

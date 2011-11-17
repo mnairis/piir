@@ -15,5 +15,6 @@
         <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team28_entities_PIIRIRIKKUJA_muudetud" object="${piiririkkuja}" z="zAJtej1gb13rIeVgv9KjA5yITAk="/>
         <field:display field="sulgeja" id="s_ee_itcollege_i377_team28_entities_PIIRIRIKKUJA_sulgeja" object="${piiririkkuja}" z="SO5ZtJKXHwBakFH5fkGh4SioFPo="/>
         <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team28_entities_PIIRIRIKKUJA_suletud" object="${piiririkkuja}" z="y05dyaUuPoWeH+pfdWku+Z6+Kmk="/>
+        <field:display field="OBJEKT" id="s_ee_itcollege_i377_team28_entities_PIIRIRIKKUJA_oBJEKT" object="${piiririkkuja}" z="Vo+7KLU2T+YcJwUEaoZIQcg2aSo="/>
     </page:show>
 </div>

@@ -14,6 +14,9 @@ import ee.itcollege.i377.team28.entities.RUUMIYKSUS;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import ee.itcollege.i377.team28.entities.PIIRIVALVUR_VOODIKOHAL;
+import java.util.Collection;
+import javax.persistence.OneToMany;
 
 /**
  * Entity implementation class for Entity: VOODIKOHT
@@ -51,6 +54,8 @@ public class VOODIKOHT implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@ManyToOne
 	private RUUMIYKSUS rUUMIYKSUS;
+	@OneToMany(mappedBy = "vOODIKOHT")
+	private Collection<PIIRIVALVUR_VOODIKOHAL> pIIRIVALVUR_VOODIKOHAL;
 
 	public VOODIKOHT() {
 		super();
@@ -137,6 +142,12 @@ public class VOODIKOHT implements Serializable {
 	}
 	public void setRUUMIYKSUS(RUUMIYKSUS param) {
 	    this.rUUMIYKSUS = param;
+	}
+	public Collection<PIIRIVALVUR_VOODIKOHAL> getPIIRIVALVUR_VOODIKOHAL() {
+	    return pIIRIVALVUR_VOODIKOHAL;
+	}
+	public void setPIIRIVALVUR_VOODIKOHAL(Collection<PIIRIVALVUR_VOODIKOHAL> param) {
+	    this.pIIRIVALVUR_VOODIKOHAL = param;
 	}
    
 }

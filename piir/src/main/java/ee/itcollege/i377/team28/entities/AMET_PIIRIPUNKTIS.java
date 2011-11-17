@@ -1,23 +1,22 @@
 package ee.itcollege.i377.team28.entities;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
-import ee.itcollege.i377.team28.entities.PIIRIVALVUR_PIIRIPUNKTIS;
-import java.util.Collection;
 import ee.itcollege.i377.team28.entities.AMET;
-import javax.persistence.OneToMany;
-import ee.itcollege.i377.team28.entities.PIIRIPUNKT;
-import javax.persistence.ManyToMany;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.persistence.ManyToOne;
 
 /**
  * Entity implementation class for Entity: AMET_PIIRIPUNKTIS
@@ -54,12 +53,11 @@ public class AMET_PIIRIPUNKTIS implements Serializable {
 	@OneToMany(mappedBy = "aMET_PIIRIPUNKTIS")
 	private Collection<PIIRIVALVUR_PIIRIPUNKTIS> pIIRIVALVUR_PIIRIPUNKTIS;
 	@ManyToMany
-	private Collection<AMET> aMET;
-	@ManyToMany
 	private Collection<PIIRIPUNKT> pIIRIPUNKT;
 	@OneToMany(mappedBy = "aMET_PIIRIPUNKTIS")
 	private Collection<PIIRIVALVUR_PIIRIPUNKTIS> pIIRIVALVUR_PIIRIPUNKTIS_1;
-
+	@ManyToOne
+	private AMET aMET;
 	public AMET_PIIRIPUNKTIS() {
 		super();
 	}   
@@ -139,12 +137,6 @@ public class AMET_PIIRIPUNKTIS implements Serializable {
 	public void setPIIRIVALVUR_PIIRIPUNKTIS(Collection<PIIRIVALVUR_PIIRIPUNKTIS> param) {
 	    this.pIIRIVALVUR_PIIRIPUNKTIS = param;
 	}
-	public Collection<AMET> getAMET() {
-	    return aMET;
-	}
-	public void setAMET(Collection<AMET> param) {
-	    this.aMET = param;
-	}
 	public Collection<PIIRIPUNKT> getPIIRIPUNKT() {
 	    return pIIRIPUNKT;
 	}
@@ -156,6 +148,12 @@ public class AMET_PIIRIPUNKTIS implements Serializable {
 	}
 	public void setPIIRIVALVUR_PIIRIPUNKTIS_1(Collection<PIIRIVALVUR_PIIRIPUNKTIS> param) {
 	    this.pIIRIVALVUR_PIIRIPUNKTIS_1 = param;
+	}
+	public AMET getAMET() {
+	    return aMET;
+	}
+	public void setAMET(AMET param) {
+	    this.aMET = param;
 	}
    
 }

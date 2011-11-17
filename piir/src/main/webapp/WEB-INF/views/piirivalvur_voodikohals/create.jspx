@@ -13,6 +13,7 @@
         <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team28_entities_PIIRIVALVUR_VOODIKOHAL_sulgeja" z="UDL8cavXKTqWCRZmn49mC4z6mXA="/>
         <field:datetime dateTimePattern="${PIIRIVALVUR_VOODIKOHAL_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team28_entities_PIIRIVALVUR_VOODIKOHAL_suletud" required="true" z="fZ233Tlg4TeYrfNRoVHNEPK02kI="/>
         <field:select field="pIIRIVALVUR" id="c_ee_itcollege_i377_team28_entities_PIIRIVALVUR_VOODIKOHAL_pIIRIVALVUR" itemValue="piirivalvur_id" items="${piirivalvurs}" path="/piirivalvurs" z="+U1XDp6IeWrMQLQiIMz2vTxzMjc="/>
+        <field:select field="vOODIKOHT" id="c_ee_itcollege_i377_team28_entities_PIIRIVALVUR_VOODIKOHAL_vOODIKOHT" itemValue="voodikoht_id" items="${voodikohts}" path="/voodikohts" z="vB4fAfjnBQ7eQNP+Z+x+4T9k0dg="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_i377_team28_entities_PIIRIVALVUR_VOODIKOHAL" render="${not empty dependencies}" z="ZczGPeyrngAF4IPmC5S63JHwJmw="/>
 </div>

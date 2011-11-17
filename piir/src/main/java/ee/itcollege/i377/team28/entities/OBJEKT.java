@@ -17,6 +17,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import ee.itcollege.i377.team28.entities.PIIRIRIKKUJA;
 
 /**
  * Entity implementation class for Entity: OBJEKT
@@ -53,6 +54,8 @@ public class OBJEKT implements Serializable {
 	private Collection<OBJEKT_INTSIDENDIS> oBJEKT_INTSIDENDIS;
 	@ManyToOne
 	private OBJEKTI_LIIK oBJEKTI_LIIK;
+	@OneToMany(mappedBy = "oBJEKT")
+	private Collection<PIIRIRIKKUJA> pIIRIRIKKUJA;
 
 	public OBJEKT() {
 		super();
@@ -131,6 +134,12 @@ public class OBJEKT implements Serializable {
 	}
 	public void setOBJEKTI_LIIK(OBJEKTI_LIIK param) {
 	    this.oBJEKTI_LIIK = param;
+	}
+	public Collection<PIIRIRIKKUJA> getPIIRIRIKKUJA() {
+	    return pIIRIRIKKUJA;
+	}
+	public void setPIIRIRIKKUJA(Collection<PIIRIRIKKUJA> param) {
+	    this.pIIRIRIKKUJA = param;
 	}
    
 }

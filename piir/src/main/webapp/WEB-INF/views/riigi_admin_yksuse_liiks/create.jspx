@@ -15,6 +15,7 @@
         <field:datetime dateTimePattern="${RIIGI_ADMIN_YKSUSE_LIIK_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team28_entities_RIIGI_ADMIN_YKSUSE_LIIK_suletud" required="true" z="zfV56EXVy2whZsNBtdYyamWCBDc="/>
         <field:simple field="vOIMALIK_ALLUVUS_1" id="c_ee_itcollege_i377_team28_entities_RIIGI_ADMIN_YKSUSE_LIIK_vOIMALIK_ALLUVUS_1" messageCode="entity_reference_not_managed" messageCodeAttribute="V O I M A L I K_ A L L U V U S" z="38gvLGYlSczHKn+KOtbbyK/NLjg="/>
         <field:simple field="rIIGI_ADMIN_YKSUS" id="c_ee_itcollege_i377_team28_entities_RIIGI_ADMIN_YKSUSE_LIIK_rIIGI_ADMIN_YKSUS" messageCode="entity_reference_not_managed" messageCodeAttribute="R I I G I_ A D M I N_ Y K S U S" z="rayvLBzneAi/krGu0A8Ruj4LrSg="/>
+        <field:textarea field="kood" id="c_ee_itcollege_i377_team28_entities_RIIGI_ADMIN_YKSUSE_LIIK_kood" required="true" z="Il8pIDcOoXailNrIv3ADD4f4ubA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_i377_team28_entities_RIIGI_ADMIN_YKSUSE_LIIK" render="${not empty dependencies}" z="R6UmPq74DEr6GqYf3uQ9uvyk55c="/>
 </div>

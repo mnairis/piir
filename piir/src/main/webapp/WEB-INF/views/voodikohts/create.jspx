@@ -14,6 +14,7 @@
         <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team28_entities_VOODIKOHT_sulgeja" z="l3PnlyJJQaguJOCarLfQjXjkIlo="/>
         <field:datetime dateTimePattern="${VOODIKOHT_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team28_entities_VOODIKOHT_suletud" required="true" z="wsvdEl2PVN9t0hdEBFEUhm6eaqU="/>
         <field:select field="rUUMIYKSUS" id="c_ee_itcollege_i377_team28_entities_VOODIKOHT_rUUMIYKSUS" itemValue="ruumiyksus_id" items="${ruumiyksus}" path="/ruumiyksus" z="MuUppN7DGfWfnKWM2ENBktdikOY="/>
+        <field:simple field="pIIRIVALVUR_VOODIKOHAL" id="c_ee_itcollege_i377_team28_entities_VOODIKOHT_pIIRIVALVUR_VOODIKOHAL" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ V O O D I K O H A L" z="Rh7Iva51ugTreS4qwIBwjLp3Y0E="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_i377_team28_entities_VOODIKOHT" render="${not empty dependencies}" z="NocHz4AgVbEofUazT/Kbw9JpIkk="/>
 </div>

@@ -195,9 +195,6 @@
             <menu:item id="i_voodikoht_new" messageCode="global_menu_new" url="/voodikohts?form" z="gXpqo2RUYb2uLulL5YgBIgWJxTI="/>
             <menu:item id="i_voodikoht_list" messageCode="global_menu_list" url="/voodikohts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Fy8bE4kxrb/7q2rcEe+NbBvKsDo="/>
         </menu:category>
-        <menu:category id="c_bear" z="fJcEx3P202G/49X/Nk5acMS2Czw=">
-            <menu:item id="i_bear_new" messageCode="global_menu_new" url="/bears?form" z="RBuWgMIxHWobMdTXD9lmvABjOO0="/>
-            <menu:item id="i_bear_list" messageCode="global_menu_list" url="/bears?page=1&amp;size=${empty param.size ? 10 : param.size}" z="yVDCmfU6IUK4m2ajDeQOGsqgoUw="/>
-        </menu:category>
+
     </menu:menu>
 </div>
