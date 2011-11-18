@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.INTSIDENDI_LIIK;
@@ -42,7 +43,9 @@ public class INTSIDENT implements Serializable {
 	private String kood;
 	@Size(min=1,max=100)
 	private String nimetus;
+	@DateTimeFormat(style="M-")
 	private Date toimumise_algus;
+	@DateTimeFormat(style="M-")
 	private Date toimumise_lopp;
 	@Digits(integer=9,fraction=0)
 	private BigDecimal GPS_longituud;
@@ -54,15 +57,18 @@ public class INTSIDENT implements Serializable {
 	@Size(min=1,max=32)
 	private String avaja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date avatud;
 	@NotNull
 	@Size(min=1,max=32)
 	private String muutja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date muudetud;
 	@Size(min=1,max=32)
 	private Date sulgeja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne

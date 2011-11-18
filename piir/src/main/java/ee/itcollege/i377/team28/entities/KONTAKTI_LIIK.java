@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.PIIRIVALVURI_KONTAKT;
@@ -40,15 +41,18 @@ public class KONTAKTI_LIIK implements Serializable {
 	@Size(min=1,max=32)
 	private String avaja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date avatud;
 	@NotNull
 	@Size(min=1,max=32)
 	private String muutja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date muudetud;
 	@Size(min=1,max=32)
 	private String sulgeja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "kONTAKTI_LIIK")

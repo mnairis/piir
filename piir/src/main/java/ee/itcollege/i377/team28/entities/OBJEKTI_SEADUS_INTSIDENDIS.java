@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.OBJEKT_INTSIDENDIS;
@@ -30,8 +31,10 @@ public class OBJEKTI_SEADUS_INTSIDENDIS implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long objekti_seadus_intsidendis_id;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date alates;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date kuni;
 	@NotNull
 	private String kirjeldus;
@@ -40,15 +43,18 @@ public class OBJEKTI_SEADUS_INTSIDENDIS implements Serializable {
 	@Size(min=1,max=32)
 	private String avaja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date avatud;
 	@NotNull
 	@Size(min=1,max=32)
 	private String muutja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date muudetud;
 	@Size(min=1,max=32)
 	private String sulgeja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne

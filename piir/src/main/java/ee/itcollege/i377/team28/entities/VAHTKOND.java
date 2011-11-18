@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.VAHTKOND_PIIRILOIGUL;
@@ -40,21 +41,26 @@ public class VAHTKOND implements Serializable {
 	private String kood;
 	@Size(min=1,max=60)
 	private String nimetus;
+	@DateTimeFormat(style="M-")
 	private Date alates;
+	@DateTimeFormat(style="M-")
 	private Date kuni;
 	private String kommentaar;
 	@NotNull
 	private String avaja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date avatud;
 	@NotNull
 	@Size(min=1,max=32)
 	private String muutja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date muudetud;
 	@Size(min=1,max=32)
 	private String sulgeja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy = "vAHTKOND")

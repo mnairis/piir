@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.AMET_PIIRIPUNKTIS;
@@ -33,8 +34,10 @@ public class PIIRIVALVUR_PIIRIPUNKTIS implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long piirivalvur_piiripunktis_id;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date alates;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date kuni;
 	@NotNull
 	@Digits(integer=5,fraction=0)
@@ -44,13 +47,16 @@ public class PIIRIVALVUR_PIIRIPUNKTIS implements Serializable {
 	@Size(min=1,max=32)
 	private String avaja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date avatud;
 	@NotNull
 	@Size(min=1,max=32)
 	private String muutja;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date muudetud;
 	@NotNull
+	@DateTimeFormat(style="M-")
 	private Date suletud;
 	@Size(min=1,max=32)
 	private String sulgeja;

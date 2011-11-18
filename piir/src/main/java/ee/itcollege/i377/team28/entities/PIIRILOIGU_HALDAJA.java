@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team28.entities.PIIRIPUNKT;
@@ -38,15 +39,20 @@ public class PIIRILOIGU_HALDAJA implements Serializable {
 	private double GPS_latitude;
 	private double korgus_merepinnast;
 	private String kommentaar;
+	@DateTimeFormat(style="M-")
 	private Date alates;
+	@DateTimeFormat(style="M-")
 	private Date kuni;
 	private String avaja;
+	@DateTimeFormat(style="M-")
 	private Date avatud;
 	@NotNull
 	@Size(min=1,max=32)
 	private String muutja;
+	@DateTimeFormat(style="M-")
 	private Date muudetud;
 	private String sulgeja;
+	@DateTimeFormat(style="M-")
 	private Date suletud;
 	private static final long serialVersionUID = 1L;
 	@ManyToOne
