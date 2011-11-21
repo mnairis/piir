@@ -31,9 +31,7 @@ import javax.validation.constraints.Size;
 @Entity
 @RooToString
 @RooEntity
-public class PIIRIPUNKT implements Serializable {
-
-	   
+public class PIIRIPUNKT implements Serializable {   
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long piiripunkt_id;
@@ -89,8 +87,7 @@ public class PIIRIPUNKT implements Serializable {
 	private Collection<AMET_PIIRIPUNKTIS> aMET_PIIRIPUNKTIS;
 	@OneToMany(mappedBy = "pIIRIPUNKT")
 	private Collection<PIIRIPUNKTI_ALLUVUS> pIIRIPUNKTI_ALLUVUS;
-
-	public PIIRIPUNKT() {
+    public PIIRIPUNKT() {
 		super();
 	}   
 	public Long getPiiripunkt_id() {

@@ -29,8 +29,6 @@ import ee.itcollege.i377.team28.entities.PIIRIPUNKTI_ALLUVUS;
 @RooToString
 @RooEntity
 public class VAEOSA implements Serializable {
-
-	   
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long vaeosa_ID_id;

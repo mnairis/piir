@@ -25,9 +25,7 @@ import javax.persistence.ManyToOne;
 @RooToString
 @RooEntity
 
-public class PIIRIPUNKTI_ALLUVUS implements Serializable {
-
-	   
+public class PIIRIPUNKTI_ALLUVUS implements Serializable {   
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long piiripunkti_alluvus_id;
