@@ -9,6 +9,7 @@
     </h3>
     <p>
       <spring:message code="welcome_text" />
+      TEST. GitHub
     </p>
   </util:panel>
 </div>
