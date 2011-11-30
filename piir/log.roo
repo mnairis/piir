@@ -42,3 +42,7 @@ web mvc language --code it
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-29 22:13:28
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-30 20:45:00
 web mvc controller --class ~.web.TestController
+web mvc controller --class ~.web.ylem
+web mvc controller --class ~.web.valvur
+web mvc controller --class ~.web.ylemController
+web mvc controller --class ~.web.valvurController

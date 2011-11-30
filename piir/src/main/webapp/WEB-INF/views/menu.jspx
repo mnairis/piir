@@ -221,6 +221,9 @@
             <menu:item id="i_piiripunkt_list" messageCode="global_menu_list" url="/piiripunkts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="G6o3sJqemKsOdnHvut/ONkfuH8Y="/>
         </menu:category>
         -->
-
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__ylemindex_id" messageCode="global_generic" url="/ylem/index" z="jtPCoDyvzAphvY1x9MWu+H0Sw0w="/>
+            <menu:item id="i_controller__valvurindex_id" messageCode="global_generic" url="/valvur/index" z="O43Z42CPXn/G2+MJtJ+A2KGwM3s="/>
+        </menu:category>
     </menu:menu>
 </div>
