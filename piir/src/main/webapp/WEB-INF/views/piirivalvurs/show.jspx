@@ -2,7 +2,11 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
+    
     <page:show id="ps_ee_itcollege_i377_team28_entities_PIIRIVALVUR" object="${piirivalvur}" path="/piirivalvurs" z="76UR5HZbdeZfi0PHPwyghtpb59Y=">
+    
+    Vaatan piirivalvurit
+    
         <field:display field="isikukood" id="s_ee_itcollege_i377_team28_entities_PIIRIVALVUR_isikukood" object="${piirivalvur}" z="xN0Gy/V6zbVgimNNxH8dwt692eI="/>
         <field:display field="eesnimed" id="s_ee_itcollege_i377_team28_entities_PIIRIVALVUR_eesnimed" object="${piirivalvur}" z="Slwl+vbt9gLANwJQvY+XYR9psEo="/>
         <field:display field="perekonnanimi" id="s_ee_itcollege_i377_team28_entities_PIIRIVALVUR_perekonnanimi" object="${piirivalvur}" z="rLMIIgdMrYRCuCae7lWv2zPEpNQ="/>

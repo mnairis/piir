@@ -76,6 +76,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLo
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     
+    <!-- SERVLETID -->
     <!-- Handles Spring requests -->
     <servlet>
         <servlet-name>piir</servlet-name>
@@ -87,9 +88,21 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLo
         <load-on-startup>1</load-on-startup>
     </servlet>
     
+    <servlet>
+    	<description>
+    	Prooviks pyyda esimest jooksu, et siis databaasi miski sisu luua</description>
+    	<display-name>FirstRun</display-name>
+    	<servlet-name>FirstRun</servlet-name>
+    	<servlet-class>ee.itcollege.i377.team28.web.FirstRun</servlet-class>
+    </servlet>
+    
     <servlet-mapping>
         <servlet-name>piir</servlet-name>
         <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>FirstRun</servlet-name>
+    	<url-pattern>/FirstRun</url-pattern>
     </servlet-mapping>
     
     <session-config>
